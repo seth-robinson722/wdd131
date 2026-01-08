@@ -1,0 +1,174 @@
+/* 1. VARIABLES & RESET*/
+:root {
+    --primary-color: #1b4965;
+    --secondary-color: #f0f0f0;
+    --accent-color: #ffd700;
+    --text-color: #333;
+    --main-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--main-font);
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* 2. PAGE STRUCTURE (Top to Bottom) */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header span#course-title {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+    color: var(--accent-color);
+}
+/* 3. MAIN GRID LAYOUT */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-weight: 700;
+    font-family: var(--main-font);
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+/* 4. REUSABLE CARD COMPONENTS */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.card h2 {
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.card h3 {
+    text-align: center;
+    margin: 20px auto 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    width: 80%;
+    font-family: var(--main-font);
+    color: #333;
+    clear: both;
+}
+
+.card p {
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+/* 5. SPECIFIC CARD ELEMENTS (Images & Lists) */
+.card img {
+    width: 150px;
+    height: auto;
+    margin: 15px;
+    border: 1px solid #ddd;
+}
+
+.profile-img {
+    float: right;
+}
+
+.flag-img{
+    float: left;
+    width: 200px;
+}
+
+/* Clearfix for floated images */
+.card::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 6. SIDEBAR CARD (Web Dev Resources) */
+.card:last-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.card:last-of-type ul {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: disc;
+    margin: 0 auto;
+    padding: 0 0 0 20px;
+    text-align: left;
+    width: fit-content;
+}
+
+.card:last-of-type ul li {
+    margin: 10px 0;
+}
+.card:last-of-type ul li a{
+        color: blue;
+        text-decoration: underline;
+}
+
+.card:last-of-type ul li a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* 7. FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#lastModified {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}

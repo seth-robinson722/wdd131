@@ -4,10 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>WDD 131 – Dynamic Web Fundamentals – Seth Robinson</title>
     <meta name="description"
         content="WDD 131 – Dynamic Web Fundamentals, Seth Robinson, this is my development of a homepage, applying prerequisite css and html knowledge as well as applying learning activity concepts including Javascript.">
     <meta name="author" content="Seth Robinson">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
@@ -17,7 +25,8 @@
             <ul>
                 <li><a href="https://www.linkedin.com/home" title="LinkedIn">LinkedIn</a></li>
                 <li><a href="https://byupw.instructure.com/" title="Canvas">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng&id=p12#p12" title="Scripture">Scripture</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng&id=p12#p12"
+                        title="Scripture">Scripture</a></li>
                 <li><a href="#" title="Final Project">Final Project</a></li>
             </ul>
         </nav>
@@ -27,16 +36,43 @@
         <h1>Seth Robinson</h1>
         <section class="card">
             <h2>About Me</h2>
-            <p>I am epic</p>
+            <img src="images/face-picture.jpg" alt="My face" class="profile-img">
+            <p>My name is Seth. I was born in Nevada, USA and now live in Texas. I am currently studying software
+                development to become a software developer. I love spending time with my brother and sister and can't
+                wait to find the love of my life. I love to read and listen to classical music.</p>
+            <h3>Texas</h3>
+            <img src="images/texas-flag.jpg" alt="The official state flag of Texas" class="flag-img">
+            <p>Texas occupies a vast $268,597$ square mile territory in the South Central United States, characterized
+                by a diverse
+                progression of landscapes ranging from coastal pine marshes to arid western deserts. The state’s
+                geography is defined by
+                four major physical regions: the Gulf Coastal Plains, the Interior Lowlands, the Great Plains, and the
+                Basin and Range
+                Province. Its economy is a global powerhouse, anchored by a massive energy sector, advanced aerospace
+                engineering, and a
+                rapidly expanding technology corridor known as the "Silicon Hills." The climate varies significantly
+                across its breadth,
+                transitioning from humid subtropical conditions in the east to semi-arid and mountainous environments in
+                the west. Texas
+                also maintains a unique cultural identity shaped by its history as an independent republic and its
+                position as a major
+                crossroads for international trade and migration.</p>
         </section>
         <section class="card">
-            <h3>dallas, Texas</h3>
-            <p>It's a great place.</p>
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com" target="_blank">Smashing Magazine</a></li>
+                <li><a href="https://css-tricks.com" target="_blank">CSS-Tricks</a></li>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                <li><a href="https://www.udemy.com" target="_blank">Udemy</a></li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>© | <span id="currentyear"></span> | Seth Robinson | United States of America</p>
+        <p> &copy; <span id="currentyear"></span> | Seth Robinson | Texas, USA</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
