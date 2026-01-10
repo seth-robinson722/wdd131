@@ -2,7 +2,7 @@
 :root {
     --primary-color: #1b4965;
     --secondary-color: #f0f0f0;
-    --accent-color: #ffd700;
+    --accent-color: #f5f7d4;
     --text-color: #333;
     --main-font: 'Roboto', sans-serif;
 }
@@ -52,6 +52,7 @@ nav ul li a:hover {
     background-color: #444;
     color: var(--accent-color);
 }
+
 /* 3. MAIN GRID LAYOUT */
 main {
     max-width: 1000px;
@@ -117,7 +118,7 @@ h1 {
     float: right;
 }
 
-.flag-img{
+.flag-img {
     float: left;
     width: 200px;
 }
@@ -150,9 +151,10 @@ h1 {
 .card:last-of-type ul li {
     margin: 10px 0;
 }
-.card:last-of-type ul li a{
-        color: blue;
-        text-decoration: underline;
+
+.card:last-of-type ul li a {
+    color: blue;
+    text-decoration: underline;
 }
 
 .card:last-of-type ul li a:hover {
