@@ -10,3 +10,17 @@
         flex-direction: row;
     }
 }
+/* --- Desktop Adjustment (temples-large.css) --- */
+@media screen and(min-width: 768px) {
+    #menu {
+        display: none;
+        /* Hide hamburger on desktop */
+    }
+
+    .navigation {
+        display: flex;
+        /* Always show menu on desktop */
+        position: static;
+        flex-direction: row;
+    }
+}
