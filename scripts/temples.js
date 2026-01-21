@@ -1,15 +1,23 @@
-// 1. Footer Dates
-const currentYear = new Date().getFullYear();
-document.querySelector("#currentyear").textContent = currentYear;
+// Footer: Display current year
+const currentYearElement = document.getElementById('currentyear');
+if (currentYearElement) {
+    currentYearElement.textContent = new Date().getFullYear();
+}
 
-const lastModified = document.lastModified;
-document.querySelector("#lastModified").textContent = `Last Modification: ${lastModified}`;
+// Footer: Display last modified date
+const lastModifiedElement = document.getElementById('lastModified');
+if (lastModifiedElement) {
+    lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+}
 
-// 2. Hamburger Menu Logic
-const mainnav = document.querySelector('.navigation');
-const hambutton = document.querySelector('#menu');
+// Hamburger Menu Toggle
+const hamburgerButton = document.getElementById('menu');
+const navigation = document.querySelector('.navigation');
 
-hambutton.addEventListener('click', () => {
-    mainnav.classList.toggle('show');
-    hambutton.classList.toggle('show');
-});
+if (hamburgerButton && navigation) {
+    hamburgerButton.addEventListener('click', () => {
+        // Toggle the 'show' class on both the button and navigation
+        hamburgerButton.classList.toggle('show');
+        navigation.classList.toggle('show');
+    });
+}

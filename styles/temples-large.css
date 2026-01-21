@@ -1,26 +1,46 @@
+/* Desktop and Larger Screen Styles */
 @media screen and (min-width: 768px) {
 
+    /* Hide hamburger button on larger screens */
+    #menu {
+        display: none;
+    }
+
+    /* Show navigation by default and style horizontally */
+    .navigation {
+        display: block;
+        position: static;
+        width: auto;
+    }
+
+    .navigation ul {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .navigation li {
+        width: auto;
+    }
+
+    .navigation a {
+        border-top: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+
     /* Expand grid to 3 columns on larger screens */
-    main {
+    .temple-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* Change navigation layout if needed for desktop */
-    nav ul {
-        flex-direction: row;
-    }
-}
-/* --- Desktop Adjustment (temples-large.css) --- */
-@media screen and(min-width: 768px) {
-    #menu {
-        display: none;
-        /* Hide hamburger on desktop */
+    /* Adjust main width for larger screens */
+    main {
+        max-width: 1200px;
+        padding: 2rem;
     }
 
-    .navigation {
-        display: flex;
-        /* Always show menu on desktop */
-        position: static;
-        flex-direction: row;
+    /* Make header span larger on desktop */
+    header span {
+        font-size: 2rem;
     }
 }
