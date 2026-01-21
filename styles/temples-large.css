@@ -1,0 +1,12 @@
+@media screen and (min-width: 768px) {
+
+    /* Expand grid to 3 columns on larger screens */
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Change navigation layout if needed for desktop */
+    nav ul {
+        flex-direction: row;
+    }
+}

@@ -104,26 +104,14 @@ footer {
     margin-top: 2rem;
 }
 
-@media screen and (min-width: 768px) {
-
-    /* Expand grid to 3 columns on larger screens */
-    main {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Change navigation layout if needed for desktop */
-    nav ul {
-        flex-direction: row;
-    }
-}
 
 
 /* --- Hamburger Button Styling --- */
 #menu {
     display: block;
-    font - size: 2rem;
-    font - weight: 700;
-    text - decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
     padding: .5rem .75rem;
     background: none;
     border: none;
@@ -145,13 +133,13 @@ footer {
 .navigation {
     display: none;
     /* Hide menu by default on mobile */
-    flex - direction: column;
-    list - style: none;
-    background - color: var(--primary - color);
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--primary - color);
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100 %;
+    width: 100%;
 }
 
 /* Show menu when JS toggles the 'show' class */
@@ -160,7 +148,7 @@ footer {
 }
 
 /* --- Desktop Adjustment (temples-large.css) --- */
-@media screen and(min - width: 768px) {
+@media screen and(min-width: 768px) {
     #menu {
         display: none;
         /* Hide hamburger on desktop */
@@ -170,6 +158,6 @@ footer {
         display: flex;
         /* Always show menu on desktop */
         position: static;
-        flex - direction: row;
+        flex-direction: row;
     }
 }
