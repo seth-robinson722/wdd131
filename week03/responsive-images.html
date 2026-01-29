@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <meta name="author" content="Seth Robinson">
+    <meta name="description" content="A page for me to learn the qualities of responsive images.">
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+
+<body>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large."  media="(min-width: 1000px)">
+
+                <source srcset="images/hero-medium." media="(min-width: 500px)">
+
+                <img src="images/hero-small.webp" alt="Dallas Texas Temple" width="500" height="250">
+            </picture>
+        </div>
+    </main>
+</body>
+
+</html>
