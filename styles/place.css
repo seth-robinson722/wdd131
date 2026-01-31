@@ -49,7 +49,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-deep-blue) 100%);
+    background: var(--accent-deep-blue);
     color: var(--primary-white);
     padding: var(--spacing-md) var(--spacing-sm);
     text-align: center;
