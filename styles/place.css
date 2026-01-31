@@ -1,0 +1,314 @@
+/* CSS Variables for Argentina Theme */
+:root {
+    /* Argentina flag colors */
+    --primary-blue: #74ACDF;
+    --primary-white: #FFFFFF;
+    --primary-yellow: #F6B40E;
+    --accent-sky: #87CEEB;
+    --accent-deep-blue: #0033A0;
+
+    /* Neutral colors */
+    --text-dark: #2c3e50;
+    --text-light: #34495e;
+    --background-light: #f8f9fa;
+    --border-color: #dee2e6;
+
+    /* Typography */
+    --font-heading: 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-deep-blue) 100%);
+    color: var(--primary-white);
+    padding: var(--spacing-md) var(--spacing-sm);
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--spacing-sm);
+}
+
+/* Hero Section - Mobile First */
+.hero {
+    margin-bottom: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero picture {
+    display: block;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+/* Data Section */
+.data {
+    background-color: var(--primary-white);
+    border: 2px solid var(--primary-blue);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(116, 172, 223, 0.2);
+}
+
+.data h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--accent-deep-blue);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    border-bottom: 3px solid var(--primary-yellow);
+    padding-bottom: var(--spacing-xs);
+}
+
+.data-grid {
+    display: grid;
+    gap: var(--spacing-sm);
+}
+
+.data-item {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-item:last-child {
+    border-bottom: none;
+}
+
+.data-item .label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.data-item .value {
+    color: var(--text-light);
+    text-align: right;
+}
+
+/* Weather Section */
+.weather {
+    background-color: var(--primary-white);
+    border: 2px solid var(--primary-blue);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(116, 172, 223, 0.2);
+}
+
+.weather h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--accent-deep-blue);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    border-bottom: 3px solid var(--primary-yellow);
+    padding-bottom: var(--spacing-xs);
+}
+
+.weather-icon-mobile {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.weather-icon-mobile img {
+    width: 80px;
+    height: 80px;
+}
+
+.weather-grid {
+    display: grid;
+    gap: var(--spacing-sm);
+}
+
+.weather-item {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.weather-item:last-child {
+    border-bottom: none;
+}
+
+.weather-item .label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.weather-item .value {
+    color: var(--text-light);
+    text-align: right;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--accent-deep-blue) 0%, var(--primary-blue) 100%);
+    color: var(--primary-white);
+    padding: var(--spacing-md);
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* Media Query for Larger Screens (Desktop/Tablet) */
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Main Layout */
+    main {
+        padding: var(--spacing-lg);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: var(--spacing-lg);
+    }
+
+    /* Hero takes full width at top */
+    .hero {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin-bottom: 0;
+    }
+
+    .hero img {
+        max-height: 500px;
+    }
+
+    /* Data on left */
+    .data {
+        grid-column: 1;
+        grid-row: 2;
+        margin-bottom: 0;
+        align-self: start;
+    }
+
+    /* Weather on right with pseudo-element icon */
+    .weather {
+        grid-column: 2;
+        grid-row: 2;
+        margin-bottom: 0;
+        align-self: start;
+    }
+
+    /* Hide mobile SVG icon in large view */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Add emoji/icon after Weather heading using pseudo-element */
+    .weather h2::after {
+        content: "⛅";
+        margin-left: var(--spacing-sm);
+        font-size: 1.5rem;
+        display: inline-block;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-5px);
+        }
+    }
+
+    /* Improved grid spacing for data and weather */
+    .data-grid,
+    .weather-grid {
+        gap: var(--spacing-md);
+    }
+
+    .data-item,
+    .weather-item {
+        padding: var(--spacing-sm) 0;
+    }
+}
+
+/* Accessibility and Print */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media print {
+
+    header,
+    footer {
+        background: none;
+        color: black;
+    }
+
+    .hero img {
+        max-height: 300px;
+    }
+}
