@@ -55,27 +55,41 @@ header span {
 .navigation {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     width: 100%;
     background-color: var(--primary-color);
-    z-index: 100;
 }
 
 .navigation.show {
+    /* Changing this to flex ensures the container is a flex container */
     display: flex;
+    flex-direction: column;
 }
 
 .navigation ul {
+    /* Use flexbox on the list itself as the "immediate child" */
+    display: flex;
+    flex-direction: column;
     list-style: none;
     padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navigation li {
+    width: 100%;
 }
 
 .navigation a {
-    display: block;
+    /* Optional: use flex inside the link to center text or icons */
+    display: flex;
+    align-items: center;
     color: var(--text-light);
     text-decoration: none;
-    padding: 1rem;
+    padding: 1.2rem;
+    /* slightly larger hit area for fingers */
+    transition: 0.3s;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
