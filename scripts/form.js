@@ -16,6 +16,37 @@ document.addEventListener("DOMContentLoaded", () => {
         productSelect.appendChild(option);
     });
 
-    // Set footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
+    /**
+     * Display current year in footer
+     */
+        function displayCurrentYear() {
+            const yearElement = document.getElementById('currentYear');
+            if (yearElement) {
+                const currentYear = new Date().getFullYear();
+                yearElement.textContent = currentYear;
+            }
+        }
+
+        /**
+         * Display last modified date in footer
+         */
+        function displayLastModified() {
+            const modifiedElement = document.getElementById('lastModified');
+            if (modifiedElement) {
+                const lastModified = document.lastModified;
+                modifiedElement.textContent = lastModified;
+            }
+        }
+
+        /**
+         * Initialize all page functions when DOM is loaded
+         */
+        function init() {
+            displayCurrentYear();
+            displayLastModified();
+            displayWindChill();
+        }
+
+        // Run initialization when page loads
+        init();
 });
