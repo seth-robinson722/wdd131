@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | CryptoSafe Checklist</title>
+    <meta name="description"
+        content="A curated list of tools, hardware wallets, and educational guides for crypto security.">
+    <meta name="author" content="Seth Robinson">
+    <link rel="stylesheet" href="styles/site-plan.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.webp" alt="CryptoSafe Logo" width="50" height="50">
+            <h1>CryptoSafe</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="checklist.html">Security Checklist</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Recommended Tools & Reading</h2>
+            <p>Security is an ongoing process. Use these trusted resources to deepen your understanding of digital asset
+                protection.</p>
+        </section>
+
+        <section class="resource-grid">
+            <article class="resource-card">
+                <img src="images/hardware-wallets.webp" alt="Cold storage devices" loading="lazy" width="400"
+                    height="250">
+                <div class="resource-content">
+                    <h3>Hardware Wallets</h3>
+                    <p>Learn why devices like Ledger and Trezor are considered the industry standard for securing
+                        private keys offline.</p>
+                    <a href="https://www.lopp.net/bitcoin-information/security.html" target="_blank"
+                        class="resource-link">External Guide &rarr;</a>
+                </div>
+            </article>
+
+            <article class="resource-card">
+                <img src="images/authenticator.webp" alt="Two-factor authentication app" loading="lazy" width="400"
+                    height="250">
+                <div class="resource-content">
+                    <h3>2FA Best Practices</h3>
+                    <p>Move away from SMS-based 2FA. Learn how to set up TOTP apps like Google Authenticator or hardware
+                        keys like YubiKey.</p>
+                    <a href="https://www.wired.com/story/how-to-use-two-factor-authentication/" target="_blank"
+                        class="resource-link">Read More &rarr;</a>
+                </div>
+            </article>
+
+            <article class="resource-card">
+                <img src="images/scam-alert.webp" alt="Warning sign for crypto scams" loading="lazy" width="400"
+                    height="250">
+                <div class="resource-content">
+                    <h3>Scam Database</h3>
+                    <p>Stay updated on the latest phishing tactics and malicious smart contracts currently targeting the
+                        community.</p>
+                    <a href="https://www.coinbase.com/learn/crypto-basics/how-to-spot-crypto-scams" target="_blank"
+                        class="resource-link">Security Blog &rarr;</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="cta-block">
+            <h3>Ready to test your setup?</h3>
+            <p>Don't just read—verify. Take our interactive audit today.</p>
+            <a href="checklist.html" class="cta-button">Go to Checklist</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CryptoSafe Checklist | Seth Robinson</p>
+        <p><a href="references.html">Reference Citations</a></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

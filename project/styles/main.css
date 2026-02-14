@@ -1,0 +1,188 @@
+/* --- Global Reset & Setup --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    line-height: 1.6;
+}
+
+/* --- Navigation & Header --- */
+header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* --- Layout Components --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 0.8)), url('../images/hero-bg.webp');
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+/* Grid System (Responsive) */
+.features-grid,
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card,
+.resource-card {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.card:hover,
+.resource-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.card img,
+.resource-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3,
+.resource-card h3,
+.card p,
+.resource-card p {
+    padding: 0.5rem 1.5rem;
+}
+
+/* --- Form Styling --- */
+form {
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid var(--accent-color);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+legend {
+    padding: 0 10px;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+}
+
+/* --- Progress Bar --- */
+.progress-bar-bg {
+    background: #444;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#progress-bar-fill {
+    background: var(--accent-color);
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--secondary-color);
+    margin-top: 4rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 4rem;
+    }
+
+    .logo-area {
+        margin-bottom: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}

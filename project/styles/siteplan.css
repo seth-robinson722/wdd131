@@ -1,0 +1,49 @@
+/* --- Variables & Design System --- */
+:root {
+    --primary-color: #0d1b2a;
+    /* Deep Navy */
+    --secondary-color: #1b263b;
+    /* Steel Blue */
+    --accent-color: #00b4d8;
+    /* Crypto Blue */
+    --text-color: #e0e1dd;
+    /* Off White */
+    --white: #ffffff;
+    --heading-font: 'Inter', sans-serif;
+    --body-font: 'Inter', sans-serif;
+    --accent-font: 'Roboto Mono', monospace;
+}
+
+/* Base styles used in the site plan document specifically */
+.color-palette {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.color-box {
+    padding: 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.light {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
