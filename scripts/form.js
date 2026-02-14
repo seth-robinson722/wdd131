@@ -9,44 +9,23 @@ const products = [
 document.addEventListener("DOMContentLoaded", () => {
     const productSelect = document.getElementById("product-name");
 
+    // Populate Product Options
     products.forEach(product => {
         const option = document.createElement("option");
-        option.value = product.id; // Using ID for value as requested
-        option.textContent = product.name; // Using Name for display
+        option.value = product.id;
+        option.textContent = product.name;
         productSelect.appendChild(option);
     });
 
-    /**
-     * Display current year in footer
-     */
-        function displayCurrentYear() {
-            const yearElement = document.getElementById('currentYear');
-            if (yearElement) {
-                const currentYear = new Date().getFullYear();
-                yearElement.textContent = currentYear;
-            }
-        }
+    // Footer Year - Fixed ID to match HTML
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 
-        /**
-         * Display last modified date in footer
-         */
-        function displayLastModified() {
-            const modifiedElement = document.getElementById('lastModified');
-            if (modifiedElement) {
-                const lastModified = document.lastModified;
-                modifiedElement.textContent = lastModified;
-            }
-        }
-
-        /**
-         * Initialize all page functions when DOM is loaded
-         */
-        function init() {
-            displayCurrentYear();
-            displayLastModified();
-            displayWindChill();
-        }
-
-        // Run initialization when page loads
-        init();
+    // Last Modified
+    const modifiedElement = document.getElementById('lastModified');
+    if (modifiedElement) {
+        modifiedElement.textContent = document.lastModified;
+    }
 });

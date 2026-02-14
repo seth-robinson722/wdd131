@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <meta name="author" content="Seth Robinson">
+    <meta name="description" content="Here is the necessary confirmation page.">
+    <link rel="stylesheet" href="styles/form.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Increment review counter in localStorage
+            let reviewCount = localStorage.getItem("reviewsSubmitted") || 0;
+            reviewCount++;
+            localStorage.setItem("reviewsSubmitted", reviewCount);
+
+            // Display the count
+            document.getElementById("review-display").textContent = reviewCount;
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Review Submitted!</h1>
+    </header>
+    <main style="text-align: center; padding: 2rem;">
+        <p>Thank you for your feedback. We appreciate your time.</p>
+        <p>Total Reviews Submitted: <span id="review-display" style="font-weight: bold;">0</span></p>
+        <a href="form.html" style="color: var(--accent);">Submit another review</a>
+    </main>
+    <footer>
+        <p>&copy; 2026 | Seth Robinson | Product Review Assignment</p>
+    </footer>
+</body>
+
+</html>
