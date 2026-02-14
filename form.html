@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form</title>
+    <meta name="author" content="Seth Robinson">
+    <meta name="description"
+        content="Share your experience! Use our easy review form to rate your favorite flux capacitors and time circuits. Your feedback helps our community find the best gear.">
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
 </head>
@@ -23,11 +26,20 @@
             <fieldset class="rating-box">
                 <legend>Overall Rating</legend>
                 <div class="stars">
-                    <label><input type="radio" name="rating" value="1" required> 1 ☆</label>
-                    <label><input type="radio" name="rating" value="2"> 2 ☆</label>
-                    <label><input type="radio" name="rating" value="3"> 3 ☆</label>
-                    <label><input type="radio" name="rating" value="4"> 4 ☆</label>
-                    <label><input type="radio" name="rating" value="5"> 5 ☆</label>
+                    <input type="radio" id="star1" name="rating" value="1" required>
+                    <label for="star1">1 ☆</label>
+
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">2 ☆</label>
+
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">3 ☆</label>
+
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">4 ☆</label>
+
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">5 ☆</label>
                 </div>
             </fieldset>
 
@@ -36,9 +48,17 @@
 
             <fieldset>
                 <legend>Which features did you find useful? (Check all that apply)</legend>
-                <label><input type="checkbox" name="features" value="durability"> Durability</label>
-                <label><input type="checkbox" name="features" value="ease-of-use"> Ease of Use</label>
-                <label><input type="checkbox" name="features" value="design"> Design</label>
+                <input type="checkbox" id="feat-durability" name="features" value="durability">
+                <label for="feat-durability">Durability</label>
+
+                <input type="checkbox" id="feat-ease" name="features" value="ease-of-use">
+                <label for="feat-ease">Ease of Use</label>
+
+                <input type="checkbox" id="feat-design" name="features" value="design">
+                <label for="feat-design">Design</label>
+
+                <input type="checkbox" id="feat-efficiency" name="features" value="efficiency">
+                <label for="feat-efficiency">Efficiency</label>
             </fieldset>
 
             <label for="written-review">Written Review (Optional)</label>
@@ -51,7 +71,7 @@
         </form>
     </main>
     <footer>
-        <p>&copy; <span id="year"></span> | Product Review Assignment | Your Name</p>
+        <p>&copy; <span id="year"></span> | Product Review Assignment | Seth Robinson</p>
     </footer>
 </body>
 

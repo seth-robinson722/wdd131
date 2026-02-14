@@ -28,6 +28,14 @@ label {
     font-weight: bold;
 }
 
+/* Specific styling for radio/checkbox labels so they don't block-level */
+fieldset label {
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
 input[type="text"],
 input[type="date"],
 select,
@@ -38,7 +46,6 @@ textarea {
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
-    /* Crucial for layout */
 }
 
 fieldset {
@@ -67,4 +74,15 @@ footer {
     text-align: center;
     margin-top: 2rem;
     font-size: 0.9rem;
+}
+
+/* Responsive Media Query - Added for Audit Compliance */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .review-form {
+        padding: 1rem;
+    }
 }
